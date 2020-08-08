@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    hello , world!
+    <br />
+    <!--{{var}} 双大括号，解析传来的var变量-->
+    今天是{{var}}，秀不秀！
+    <br />
+    <!-- 大括号{}里带%表示控制结构，除了for还有if -->
+    列表中的list有
+    {%  for data in list  %}
+        <li>{{data}}</li>
+    {%  endfor%}
+
+    <!--了解一下在页面打印表格，以及如何迭代-->
+    字典打印：<br/>
+    <table border="1">
+            {%for key,value in task.items()%}  <!-- [(key,value),(...),(...)] -->
+            <tr>
+                <td>{{key}}</td>
+                <td>{{value}}</td>
+            </tr>
+            {%endfor%}
+
+    </table>
+
+</body>
+</html>

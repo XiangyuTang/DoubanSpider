@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--关于下面的action不要写死成"localhost...,因为项目后期需要部署，用url_for可以自动找到对应路由的名字如@app.route('/result')"-->
+    <form action="{{url_for('result')}}" method="post">
+        <p>姓名：<input type="text" name="姓名"></p>
+        <p>年龄：<input type="text" name="年龄"></p>
+        <p>性别：<input type="text" name="性别"></p>
+        <p>地址：<input type="text" name="地址"></p>
+        <p><input type="submit" value="提交"></p>
+    </form>
+</body>
+</html>
